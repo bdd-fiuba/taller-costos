@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=costos
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - ./data/.db/postgres:/var/lib/postgresql/data
+      - ./data/books:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"

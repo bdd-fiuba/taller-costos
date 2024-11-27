@@ -1,0 +1,4 @@
+psycopg2-binary
+ipython-sql
+notebook
+prettytable==3.11.0
